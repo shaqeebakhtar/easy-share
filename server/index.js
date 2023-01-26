@@ -11,7 +11,11 @@ connectDB();
 // cors
 
 const corsOption = {
-  origin: process.env.ALLOWED_CLIENTS.split(","),
+  origin: [
+    "https://easy-share-api.vercel.app",
+    "https://easyshare-shaq.vercel.app",
+    "http://localhost:5000",
+  ],
 };
 
 app.use(cors(corsOption));
