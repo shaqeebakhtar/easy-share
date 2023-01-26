@@ -48,7 +48,7 @@ const Upload = () => {
     formData.append("file", file);
 
     await axios
-      .post("/api/files", formData)
+      .post("https://easy-share-api.vercel.app/api/files", formData)
       .then((res) => {
         console.log(res.data);
         setShareLink(res.data.file);
