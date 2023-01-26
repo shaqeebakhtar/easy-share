@@ -18,3 +18,5 @@ app.use("/files", require("../routes/show"));
 app.use("/files/download", require("../routes/download"));
 
 app.listen(PORT, () => console.log(`server running on PORT:${PORT}`));
+
+module.exports = app;
