@@ -1,0 +1,99 @@
+body.popup-active {
+  overflow: hidden;
+}
+
+.btn-copy {
+  cursor: pointer;
+  border: 0;
+  background-color: var(--clr-neutral-900);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  padding: 0.5em;
+}
+
+.popup-backdrop {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  --max-width: 25rem;
+  --margin: 1.125em;
+  width: min(var(--max-width), 100% - var(--margin));
+  border-radius: 0.5em;
+  padding: 1.125em;
+  margin: 1.25em;
+}
+
+.popup__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25em;
+}
+
+.popup__close {
+  border: 0;
+  background: var(--clr-neutral-200);
+  padding: 0.25em;
+  cursor: pointer;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.popup__close img {
+  width: 1.125rem;
+}
+
+.popup__body {
+  margin-bottom: 2em;
+}
+
+.share-link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--clr-neutral-200);
+  border: 1px dashed var(--clr-neutral-300);
+  border-radius: 0.25em;
+  padding: 0.5em;
+  margin-top: 0.5em;
+}
+
+.share-link img {
+  width: 1.125rem;
+}
+
+.share-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
+
+.share-social {
+  cursor: pointer;
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: 50%;
+  background: transparent;
+  width: 3.125rem;
+  padding: 0.625em;
+}
+
+@media (width >=35em) {
+  .popup {
+    padding: 1.5em;
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@400,700,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Download | EasyShare</title>
+  </head>
+  <body>
+    <h3 class="fw-semi-bold fs-title-lg">Download Your File</h3>
+    <section class="download-file | bg-neutral-100 box-shadow">
+      <% if(locals.error){ %>
+      <div class="file-description">
+        <h2 class="fw-semi-bold"><%= locals.error %></h2>
+      </div>
+      <% } else { %>
+      <div class="file-description">
+        <p
+          class="file-name | fs-title fw-semi-bold"
+          style="margin-bottom: 0.5em"
+        >
+          <%= filename %>
+          <span class="file-size | fw-regular fs-body-sm text-neutral-500">
+            (<%= filesize %> bytes)
+          </span>
+        </p>
+        <a href="<%= downloadlink %>" class="btn-download">Download</a>
+        <span class="fs-body-x-sm text-neutral-500">
+          The download link will expire in 24hrs
+        </span>
+      </div>
+      <% } %>
+    </section>
+  </body>
+</html>

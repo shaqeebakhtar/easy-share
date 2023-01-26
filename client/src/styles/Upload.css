@@ -1,0 +1,80 @@
+.separator {
+  position: relative;
+  display: block;
+  margin: 0.5em 0;
+}
+
+.separator::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    to left,
+    var(--clr-neutral-300),
+    var(--clr-neutral-100)
+  );
+  height: 1.5px;
+  width: 7.5rem;
+  top: 50%;
+  right: 1.5rem;
+}
+
+.separator::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    var(--clr-neutral-300),
+    var(--clr-neutral-100)
+  );
+  height: 1.5px;
+  width: 7.5rem;
+  top: 50%;
+  left: 1.5rem;
+}
+
+.upload-files {
+  --max-width: 640px;
+  --margin: 1.125em;
+  width: min(var(--max-width), 100% - var(--margin));
+  margin-inline: auto;
+  border-radius: 0.5rem;
+  padding: 1.5em;
+  margin: 0 1.25em !important;
+}
+
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed var(--clr-neutral-300);
+  border-radius: 0.25rem;
+  padding: 1.25em;
+  margin-top: 1em;
+  transition: background 300ms ease, border 300ms ease;
+}
+
+.upload-area.active {
+  background-color: var(--clr-neutral-200);
+  border-color: var(--clr-neutral-500);
+}
+
+.btn-choose {
+  border: 0;
+  cursor: pointer;
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+  font-weight: 500;
+  padding: 0.5em 1.25em;
+  margin: 0.5em 0 0.25em;
+  border-radius: 0.25rem;
+  transition: background 200ms ease;
+}
+
+.btn-choose:is(:hover, :focus-visible) {
+  background-color: var(--clr-neutral-300);
+}
+
+.upload--icon img {
+  width: 2rem;
+  margin-bottom: 0.5em;
+}
